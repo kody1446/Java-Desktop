@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorysystem.AddPartController">
+   <children>
+      <Label layoutX="32.0" layoutY="21.0" prefHeight="29.0" prefWidth="83.0" text="Add Part" textFill="#201f6b">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="115.0" text="ID" />
+      <Label layoutX="141.0" layoutY="177.0" text="Name" />
+      <Label layoutX="141.0" layoutY="234.0" text="Inv" />
+      <Label layoutX="141.0" layoutY="296.0" text="Price/Cost" />
+      <Label layoutX="141.0" layoutY="361.0" text="Max" />
+      <Label layoutX="334.0" layoutY="361.0" text="Min" />
+      <Button fx:id="saveChangesBtn" layoutX="321.0" layoutY="457.0" mnemonicParsing="false" onAction="#SavePart" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="434.0" layoutY="457.0" mnemonicParsing="false" onAction="#cancelBtnClicked" text="Cancel" />
+      <TextField fx:id="stockTxt" layoutX="235.0" layoutY="229.0" promptText="Inv" />
+      <TextField fx:id="priceTxt" layoutX="235.0" layoutY="291.0" promptText="Price/Cost" />
+      <TextField fx:id="nameTxt" layoutX="235.0" layoutY="172.0" promptText="Part Name" />
+      <TextField fx:id="idTxt" layoutX="235.0" layoutY="110.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="maxTxt" layoutX="184.0" layoutY="356.0" prefHeight="31.0" prefWidth="113.0" promptText="Max" />
+      <TextField fx:id="minTxt" layoutX="373.0" layoutY="356.0" prefHeight="31.0" prefWidth="113.0" promptText="Min" />
+      <Pane layoutX="115.0" layoutY="9.0" prefHeight="82.0" prefWidth="272.0">
+         <children>
+            <RadioButton fx:id="InHousePart" mnemonicParsing="false" onAction="#IfInHouseSelected" prefHeight="82.0" prefWidth="107.0" text="In-House" />
+            <TextField fx:id="MachineIdtxt" layoutX="107.0" layoutY="53.0" prefHeight="31.0" prefWidth="107.0" promptText="Mach ID" />
+            <Label layoutX="113.0" layoutY="27.0" prefHeight="29.0" prefWidth="95.0" text="Machine ID" />
+         </children>
+      </Pane>
+      <Pane layoutX="346.0" layoutY="3.0" prefHeight="95.0" prefWidth="242.0">
+         <children>
+            <TextField fx:id="CompanyNametxt" layoutX="113.0" layoutY="58.0" prefHeight="31.0" prefWidth="125.0" promptText="Comp Nm">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+            <Label layoutX="131.0" layoutY="37.0" text="Company Name" />
+            <RadioButton fx:id="OutSourcedPart" layoutY="7.0" mnemonicParsing="false" onAction="#IfOutSourceSelected" prefHeight="82.0" prefWidth="113.0" text="Outsourced" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

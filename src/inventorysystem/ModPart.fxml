@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorysystem.ModPartController">
+   <children>
+      <Label layoutX="34.0" layoutY="100.0" text="ID" />
+      <Label layoutX="22.0" layoutY="151.0" text="Name" />
+      <Label layoutX="32.0" layoutY="200.0" text="Inv" />
+      <Label layoutX="8.0" layoutY="244.0" text="Price/Cost" />
+      <Label layoutX="20.0" layoutY="299.0" text="Max" />
+      <Label layoutX="150.0" layoutY="299.0" text="Min" />
+      <Button fx:id="saveChangesBtn" layoutX="57.0" layoutY="365.0" mnemonicParsing="false" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="192.0" layoutY="365.0" mnemonicParsing="false" text="Cancel" />
+      <TextField fx:id="stockTxt" layoutX="82.0" layoutY="195.0" promptText="Inv" />
+      <TextField fx:id="priceTxt" layoutX="82.0" layoutY="239.0" promptText="Price/Cost" />
+      <TextField fx:id="nameTxt" layoutX="82.0" layoutY="146.0" promptText="Part Name" />
+      <TextField fx:id="idTxt" layoutX="82.0" layoutY="95.0" promptText="Auto Gen - Disabled" />
+      <TextField fx:id="maxTxt" layoutX="68.0" layoutY="294.0" prefHeight="31.0" prefWidth="51.0" promptText="Max" />
+      <TextField fx:id="minTxt" layoutX="192.0" layoutY="294.0" prefHeight="31.0" prefWidth="51.0" promptText="Min" />
+      <Pane layoutX="104.0" layoutY="-5.0" prefHeight="101.0" prefWidth="161.0">
+         <children>
+            <TextField fx:id="MachineIdtxt" layoutX="14.0" layoutY="56.0" prefHeight="31.0" prefWidth="107.0" promptText="Mach ID" />
+            <TextField fx:id="CompanyNametxt" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="125.0" promptText="Comp Nm">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane layoutX="346.0" layoutY="3.0" prefHeight="69.0" prefWidth="127.0">
+         <children>
+            <Label layoutX="-47.0" layoutY="19.0" prefHeight="29.0" prefWidth="107.0" text="Modify Part" textFill="#201f6b">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <RadioButton fx:id="InHousePart" layoutX="4.0" layoutY="57.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="In-House" />
+      <TableView fx:id="partTable" layoutX="277.0" layoutY="111.0" prefHeight="332.0" prefWidth="311.0">
+        <columns>
+          <TableColumn fx:id="partIdColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="partNameColumn" prefWidth="79.0" text="Name" />
+            <TableColumn fx:id="partStockColumn" prefWidth="86.0" text="Inv Level" />
+            <TableColumn fx:id="partPriceColumn" text="Price" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="OutSourcedPart" layoutX="4.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="107.0" text="Outsourced" />
+      <Label layoutX="298.0" layoutY="86.0" prefHeight="21.0" prefWidth="270.0" text="Choose a part from the table to modify!" />
+   </children>
+</AnchorPane>
